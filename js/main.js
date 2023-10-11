@@ -1,10 +1,6 @@
-let API_URL = "https://api.unsplash.com/photos?query=mountains"
+let API_URL = "https://api.unsplash.com/photos?page=2"
 
 let columns = document.querySelectorAll('.column')
-
-// malumot so'rash - GET
-
-// [{}, {}, {}, {}]
 
 fetch(API_URL, {
   headers: {
@@ -36,7 +32,7 @@ fetch(API_URL, {
       }
     })
   })
-  
+
   res3.forEach((item, index) => {
     let img = document.createElement('img')
     img.src = item.urls.regular
